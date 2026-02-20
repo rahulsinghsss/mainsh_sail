@@ -80,10 +80,17 @@ const levelConfig = {
     OEM: { color: "bg-slate-500", text: "OEM" }
 }
 
-export function ExpertProfiles() {
+export function ExpertProfiles({ selectedLevels = [] }: { selectedLevels?: string[] }) {
+    const filtered = selectedLevels.length > 0
+        ? experts.filter((e) => selectedLevels.includes(e.level))
+        : experts;
+
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {experts.map((expert) => (
+            {filtered.length === 0 && (
+                <p className="col-span-2 text-center text-slate-400 py-12">No experts match the selected filters.</p>
+            )}
+            {filtered.map((expert) => (
                 <Card key={expert.id} className="p-6 hover:shadow-lg transition-shadow">
                     <div className="flex items-start gap-4 mb-4">
                         {/* Profile Image */}
