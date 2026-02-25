@@ -22,7 +22,7 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
 const sidebarItems = [
-    { name: "Executive View", icon: Home, href: "/" },
+    { name: "Executive View", icon: Home, href: "/dashboard" },
     { name: "Knowledge transfer", icon: BookOpen, href: "/knowledge" },
     { name: "Subject Matter Expert", icon: Cpu, href: "/twins" },
     { name: "Challenges", icon: FileText, href: "/challenges" },

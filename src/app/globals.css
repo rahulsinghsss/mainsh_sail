@@ -75,3 +75,108 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* ── Landing page animations ─────────────────────────────────── */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-18px); }
+}
+
+@keyframes floatYSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-12px) rotate(3deg); }
+}
+
+@keyframes cubeFloat {
+  0%, 100% { transform: rotateX(28deg) rotateY(45deg) translateY(0px); }
+  50%       { transform: rotateX(28deg) rotateY(45deg) translateY(-16px); }
+}
+
+@keyframes cubeRotate {
+  from { transform: rotateX(28deg) rotateY(0deg); }
+  to   { transform: rotateX(28deg) rotateY(360deg); }
+}
+
+@keyframes pyramidFloat {
+  0%, 100% { transform: translateY(0px) rotateZ(0deg); }
+  50%       { transform: translateY(-14px) rotateZ(2deg); }
+}
+
+@keyframes sphereGlow {
+  0%, 100% { opacity: 0.7; box-shadow: 0 0 40px 8px rgba(59,130,246,0.25); }
+  50%       { opacity: 1;   box-shadow: 0 0 80px 20px rgba(59,130,246,0.45); }
+}
+
+@keyframes ambientPulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50%       { opacity: 0.7; transform: scale(1.08); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+@keyframes particleDrift {
+  0%   { transform: translateY(0) translateX(0) scale(1);   opacity: 0.6; }
+  50%  { transform: translateY(-60px) translateX(20px) scale(1.2); opacity: 1; }
+  100% { transform: translateY(-120px) translateX(-10px) scale(0.8); opacity: 0; }
+}
+
+@keyframes scanLine {
+  0%   { top: -10%; }
+  100% { top: 110%; }
+}
+
+@keyframes borderGlow {
+  0%, 100% { border-color: rgba(59,130,246,0.2); }
+  50%       { border-color: rgba(59,130,246,0.5); }
+}
+
+.landing-fade-1 { animation: fadeInUp 0.7s ease both; animation-delay: 0.1s; }
+.landing-fade-2 { animation: fadeInUp 0.7s ease both; animation-delay: 0.25s; }
+.landing-fade-3 { animation: fadeInUp 0.7s ease both; animation-delay: 0.4s; }
+.landing-fade-4 { animation: fadeInUp 0.7s ease both; animation-delay: 0.55s; }
+.landing-fade-5 { animation: fadeInUp 0.7s ease both; animation-delay: 0.7s; }
+
+.cube-scene {
+  perspective: 700px;
+}
+.css-cube {
+  width: 130px;
+  height: 130px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: cubeFloat 5s ease-in-out infinite;
+}
+.css-cube .face {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border: 1px solid rgba(100, 160, 220, 0.12);
+}
+.css-cube .front  { background: linear-gradient(135deg, #1a2e48, #0d1f35); transform: translateZ(65px); }
+.css-cube .back   { background: linear-gradient(135deg, #0d1828, #091522); transform: rotateY(180deg) translateZ(65px); }
+.css-cube .left   { background: linear-gradient(135deg, #132438, #0a1828); transform: rotateY(-90deg) translateZ(65px); }
+.css-cube .right  { background: linear-gradient(135deg, #1e3450, #122840); transform: rotateY(90deg) translateZ(65px); }
+.css-cube .top    { background: linear-gradient(135deg, #243d5c, #182f4a); transform: rotateX(90deg) translateZ(65px); }
+.css-cube .bottom { background: linear-gradient(135deg, #0d1828, #071015); transform: rotateX(-90deg) translateZ(65px); }
+
+.particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(147, 197, 253, 0.6);
+  animation: particleDrift linear infinite;
+}
