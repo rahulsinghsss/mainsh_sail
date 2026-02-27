@@ -78,7 +78,7 @@ const STATS = [
 export default function LandingPage() {
   return (
     <div
-      className="min-h-screen overflow-x-hidden relative"
+      className="min-h-screen relative"
       style={{ background: "linear-gradient(160deg, #050912 0%, #080e1a 50%, #0a1020 100%)" }}
     >
       {/* ── Ambient glow blobs ─────────────────────────────── */}
@@ -238,8 +238,8 @@ export default function LandingPage() {
             <Image
               src="/sail_logo-removebg-preview.png"
               alt="SAIL Logo"
-              width={36}
-              height={36}
+              width={56}
+              height={56}
               className="object-contain"
             />
             <span className="text-xl font-bold tracking-tight text-white">SAIL</span>
@@ -533,8 +533,8 @@ export default function LandingPage() {
             <Image
               src="/sail_logo-removebg-preview.png"
               alt="SAIL Logo"
-              width={28}
-              height={28}
+              width={48}
+              height={48}
               className="object-contain"
             />
             <span className="font-semibold text-white">SAIL IdeaForge</span>
