@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import {
     BarChart3,
@@ -15,7 +16,6 @@ import {
     Bell,
     Box,
     Cpu,
-    Database
 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -38,9 +38,13 @@ export function Sidebar({ className }: { className?: string }) {
         <div className={cn("flex h-screen w-64 flex-col border-r bg-white", className)}>
             <div className="flex h-16 items-center border-b px-6">
                 <div className="flex items-center gap-2">
-                    <div className="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center">
-                        <Database className="h-5 w-5 text-white" />
-                    </div>
+                    <Image
+                        src="/sail_logo-removebg-preview.png"
+                        alt="SAIL Logo"
+                        width={32}
+                        height={32}
+                        className="object-contain"
+                    />
                     <span className="text-xl font-bold tracking-tight text-slate-900">SAIL</span>
                 </div>
             </div>

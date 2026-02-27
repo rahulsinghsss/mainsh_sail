@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, BookOpen, Users, Zap, BarChart3, Database, ChevronRight, Shield, RefreshCw } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, BookOpen, Users, Zap, BarChart3, ChevronRight, Shield, RefreshCw } from "lucide-react";
 
 const PARTICLES = [
   { left: "12%",  top: "30%", delay: "0s",    dur: "6s"  },
@@ -234,12 +235,13 @@ export default function LandingPage() {
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5">
-            <div
-              className="flex h-9 w-9 items-center justify-center rounded-lg"
-              style={{ background: "linear-gradient(135deg, #1d4ed8, #3b82f6)" }}
-            >
-              <Database className="h-5 w-5 text-white" />
-            </div>
+            <Image
+              src="/sail_logo-removebg-preview.png"
+              alt="SAIL Logo"
+              width={36}
+              height={36}
+              className="object-contain"
+            />
             <span className="text-xl font-bold tracking-tight text-white">SAIL</span>
             <span
               className="hidden text-sm font-medium sm:inline"
@@ -311,7 +313,7 @@ export default function LandingPage() {
           <h1 className="landing-fade-2 mb-6 font-bold leading-[1.08] tracking-tight text-white"
             style={{ fontSize: "clamp(2.6rem, 5vw, 4rem)" }}
           >
-            Unlock Knowledge,
+            ONE SAIL
             <br />
             <span
               style={{
@@ -321,7 +323,7 @@ export default function LandingPage() {
                 backgroundClip: "text",
               }}
             >
-              Power Your Plant
+              SAMPADA KENDRA
             </span>
           </h1>
 
@@ -528,12 +530,13 @@ export default function LandingPage() {
           style={{ color: "rgba(100,116,139,0.8)" }}
         >
           <div className="flex items-center gap-2">
-            <div
-              className="flex h-7 w-7 items-center justify-center rounded-md"
-              style={{ background: "linear-gradient(135deg, #1d4ed8, #3b82f6)" }}
-            >
-              <Database className="h-4 w-4 text-white" />
-            </div>
+            <Image
+              src="/sail_logo-removebg-preview.png"
+              alt="SAIL Logo"
+              width={28}
+              height={28}
+              className="object-contain"
+            />
             <span className="font-semibold text-white">SAIL IdeaForge</span>
             <span style={{ color: "rgba(100,116,139,0.6)" }}>
               — Knowledge Transfer Platform
