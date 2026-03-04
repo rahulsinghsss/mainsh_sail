@@ -73,7 +73,7 @@ export function Sidebar({ className }: { className?: string }) {
                     })}
                 </nav>
             </div>
-            <div className="flex items-center justify-start border-t py-4 px-4" style={{ background: "rgba(30, 41, 59, 0.15)" }}>
+            <div className="flex items-center justify-start border-t py-4 px-4">
                 <Image
                     src="/sail_logo-removebg-preview.png"
                     alt="SAIL Logo"
