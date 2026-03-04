@@ -41,8 +41,8 @@ export function Sidebar({ className }: { className?: string }) {
                     <Image
                         src="/sail_logo-removebg-preview.png"
                         alt="SAIL Logo"
-                        width={32}
-                        height={32}
+                        width={52}
+                        height={52}
                         className="object-contain"
                     />
                     <span className="text-xl font-bold tracking-tight text-slate-900">SAIL</span>
@@ -72,6 +72,15 @@ export function Sidebar({ className }: { className?: string }) {
                         )
                     })}
                 </nav>
+            </div>
+            <div className="flex items-center justify-center border-t py-4 bg-slate-800">
+                <Image
+                    src="/sail_logo-removebg-preview.png"
+                    alt="SAIL Logo"
+                    width={80}
+                    height={80}
+                    className="object-contain"
+                />
             </div>
         </div>
     )
