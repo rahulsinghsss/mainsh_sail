@@ -86,8 +86,8 @@ export function Sidebar({ className }: { className?: string }) {
                     <Image
                         src="/sail_logo-removebg-preview.png"
                         alt="SAIL Logo"
-                        width={80}
-                        height={80}
+                        width={130}
+                        height={130}
                         className="object-contain hover:opacity-80 transition-opacity"
                     />
                 </button>
