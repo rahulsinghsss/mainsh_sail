@@ -5,16 +5,8 @@ import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import {
-    BarChart3,
     BookOpen,
-    FileText,
     Home,
-    Layers,
-    Settings,
-    Users,
-    Search,
-    Bell,
-    Box,
     Cpu,
     Download,
     X,
@@ -22,16 +14,11 @@ import {
 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
 
 const sidebarItems = [
     { name: "Executive View", icon: Home, href: "/dashboard" },
     { name: "Knowledge transfer", icon: BookOpen, href: "/knowledge" },
     { name: "Subject Matter Expert", icon: Cpu, href: "/twins" },
-    { name: "Challenges", icon: FileText, href: "/challenges" },
-    { name: "Ideation", icon: Layers, href: "/ideation" },
-    { name: "Replication", icon: Box, href: "/replication" },
-    { name: "Analytics", icon: BarChart3, href: "/analytics" },
 ]
 
 export function Sidebar({ className }: { className?: string }) {
@@ -86,8 +73,8 @@ export function Sidebar({ className }: { className?: string }) {
                     <Image
                         src="/sail_logo-removebg-preview.png"
                         alt="SAIL Logo"
-                        width={130}
-                        height={130}
+                        width={200}
+                        height={200}
                         className="object-contain hover:opacity-80 transition-opacity"
                     />
                 </button>
